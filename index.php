@@ -53,7 +53,40 @@ $hotels = [
 </head>
 
 <body>
+    <table class="table">
+        <thead>
+            <tr>
 
+                <?php
+                foreach ($hotels[0] as $key => $value) {
+
+                    ?>
+                    <th>
+                        <?php echo $key ?>
+                    </th>
+                    <?php
+                }
+                ?>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            foreach ($hotels as $singleHotel) {
+                echo "<tr>";
+
+                foreach ($singleHotel as $singleHotelKey => $singleHotelValue) {
+                    ?>
+                    <td>
+                        <?php echo $singleHotelValue ?>
+                    <td>
+
+                        <?php
+                }
+                echo "<tr>";
+            }
+            ?>
+        </tbody>
+    </table>
 </body>
 
 </html>
